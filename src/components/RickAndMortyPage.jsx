@@ -59,7 +59,7 @@ const RickAndMortyPage = () => {
     <section className={`website__wrapper`}>
       <section className={`searchbox__section`}>
         <div className={`website__logo`}>
-          <a href="root" onClick={() => LoadWebsite()}><img src={WebsiteLogo} alt="Rick and Morty logo" /></a>
+          <a href="#" onClick={() => LoadWebsite()}><img src={WebsiteLogo} alt="Rick and Morty logo" /></a>
         </div>
         <BoxSeach
           SearchSectionClass={`searchbar__wrapper`}
