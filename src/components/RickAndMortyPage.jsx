@@ -15,13 +15,6 @@ const RickAndMortyPage = () => {
   // const [error, setError] = useState(false);
 
   useEffect(() => {
-    LoadWebsite();
-    return (
-      LoadWebsite()
-    )
-  }, []);
-
-  const LoadWebsite = () => {
     const getRandom = Math.floor((Math.random() * 126) + 1);
     axios
       .get(`https://rickandmortyapi.com/api/location/${getRandom}`)
@@ -31,7 +24,7 @@ const RickAndMortyPage = () => {
         setDimensionLocation(response.data.dimension);
         setCharacters(response.data.residents);
       });
-  };
+  }, []);
 
   const SearchLocation = () => {
     axios
@@ -52,14 +45,13 @@ const RickAndMortyPage = () => {
 
   const getError = () => {
     alert('Location out of range. Limit locations 126');
-    LoadWebsite();
   };
 
   return (
     <section className={`website__wrapper`}>
       <section className={`searchbox__section`}>
         <div className={`website__logo`}>
-          <a onClick={() => LoadWebsite()}><img src={WebsiteLogo} alt="Rick and Morty logo" /></a>
+          <img src={WebsiteLogo} alt="Rick and Morty logo" />
         </div>
         <BoxSeach
           SearchSectionClass={`searchbar__wrapper`}

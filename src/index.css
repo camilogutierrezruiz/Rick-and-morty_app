@@ -64,14 +64,7 @@ body::-webkit-scrollbar-thumb {
   transform: scale(105%);
 }
 
-.website__logo>a {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  cursor: pointer;
-}
-
-.website__logo>a>img {
+.website__logo>img {
   width: 100%;
   height: 100%;
   object-fit: contain;
